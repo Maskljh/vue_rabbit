@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox布局示例（均匀分布margin）</title>
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap; /* 允许换行 */
+            width: 100%;
+        }
+
+        .box {
+            width: calc(16.666% - 10px); /* 每个盒子占据1/6的宽度，减去间距 */
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box; /* 确保内边距和边框不影响总宽度 */
+            margin: 5px; /* 设置盒子的外边距 */
+        }
+
+        /* 取消每行最后一个盒子的右边距
+        .box:nth-child(6n) {
+            margin-right: 0;
+        } */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+    </div>
+</body>
+</html>
