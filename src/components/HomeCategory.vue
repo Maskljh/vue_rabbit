@@ -24,7 +24,7 @@ const categoryStore = useCategoryStore();
                     {{ i.name }}
                   </p>
                   <p class="desc ellipsis">{{ i.desc }}</p>
-                    
+
                   <p class="price"><i>¥</i>{{ i.price }}</p>
                 </div>
               </RouterLink>
@@ -39,7 +39,7 @@ const categoryStore = useCategoryStore();
 
 <style scoped lang='scss'>
 .home-category {
-  width: 250px;
+  width: 100%;
   height: 500px;
   background: rgba(0, 0, 0, 0.8);
   position: relative;
@@ -47,9 +47,7 @@ const categoryStore = useCategoryStore();
 
   .menu {
     list-style-type: none;
-    // display: flex;
     li {
-      // padding-left: 10px;
       height: 55px;
       line-height: 55px;
 
@@ -63,19 +61,21 @@ const categoryStore = useCategoryStore();
 
         &:first-child {
           font-size: 16px;
+          font-weight: bold;
         }
       }
 
       .layer {
-        width: 1200px;
+        width: 500%;
         height: 500px;
         background: rgba(255, 255, 255, 0.8);
         position: absolute;
-        left: 250px;
+        left: 100%;
         top: 0;
         display: none;
         padding: 0 15px;
         overflow:  auto;
+        box-sizing: border-box;
 
         h4 {
           font-size: 20px;
@@ -94,20 +94,20 @@ const categoryStore = useCategoryStore();
           display: flex;
           flex-wrap: wrap;
           list-style-type: none;
+          justify-content: space-between;
 
           li {
-            width: 310px;
+            width: 24%;
             height: 200px;
-            // margin-right: 15px;
-            // margin-bottom: 15px;
-            margin: 15px auto;
+            margin: 15px 0;
             border: 1px solid #eee;
             border-radius: 4px;
             background: #fff;
+            box-sizing: border-box;
 
-            &:nth-child(3n) {
-              margin-right: 0;
-            }
+            // &:nth-child(3n) {
+            //   margin-right: 0;
+            // }
 
             a {
               display: flex;
@@ -153,7 +153,6 @@ const categoryStore = useCategoryStore();
         }
       }
 
-      // 关键样式  hover状态下的layer盒子变成block
       &:hover {
         .layer {
           display: block;

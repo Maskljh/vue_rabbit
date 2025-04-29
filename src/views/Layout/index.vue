@@ -16,7 +16,16 @@ onMounted(()=>{
 <template>
   <LayoutFixed />
   <LayoutNav />
-  <LayoutHeader />
-  <RouterView />
+  <div class="main-container">
+    <LayoutHeader />
+    <RouterView />
+  </div>
   <LayoutFooter />
 </template>
+
+<style scoped lang='scss'>
+.main-container{
+  margin-left: 10%;
+  margin-right: 10%;
+}
+</style>

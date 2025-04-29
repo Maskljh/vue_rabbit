@@ -15,3 +15,17 @@ import homeProduct from '@/components/HomeProduct.vue'
   <HomeHot />
   <homeProduct />
 </template>
+
+<style scoped lang="scss">
+.container{
+  width: 100%;
+  display: flex;
+}
+.home-category{
+  flex: 1;
+}
+.home-banner{
+  flex: 5;
+}
+</style>
+

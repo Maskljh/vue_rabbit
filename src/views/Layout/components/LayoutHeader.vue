@@ -42,7 +42,7 @@ const categoryStore=useCategoryStore()
   }
 
   .logo {
-    width: 20%;
+    flex: 2;
 
     a {
       display: block;
@@ -56,7 +56,7 @@ const categoryStore=useCategoryStore()
   }
 
   .app-header-nav {
-    width: 60%;
+    flex: 6;
     display: flex;
     padding-left: 40px;
     position: relative;
