@@ -24,6 +24,7 @@ const categoryStore = useCategoryStore();
                     {{ i.name }}
                   </p>
                   <p class="desc ellipsis">{{ i.desc }}</p>
+                    
                   <p class="price"><i>¥</i>{{ i.price }}</p>
                 </div>
               </RouterLink>
